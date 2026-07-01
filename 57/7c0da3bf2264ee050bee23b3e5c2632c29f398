@@ -1,0 +1,14 @@
+.gitignore
+  h_90186079e5a8a0 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "577c0da3bf2264ee050bee23b3e5c2632c29f398",
+  "prompts": {},
+  "humans": {
+    "h_90186079e5a8a0": {
+      "author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  }
+}
