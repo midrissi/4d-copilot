@@ -1,0 +1,1496 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": [],
+		"currentState": "root"
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"className": "w-full px-6 py-12",
+				"airyMode": false,
+				"style": {
+					"backgroundColor": "var(--background-page)"
+				}
+			},
+			"displayName": "Page",
+			"custom": {},
+			"parent": "",
+			"hidden": false,
+			"nodes": [
+				"headerSection",
+				"mainCard"
+			],
+			"linkedNodes": {}
+		},
+		"headerSection": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "w-full max-w-2xl mx-auto mb-8",
+				"role": "banner",
+				"classNames": [],
+				"style": {
+					"paddingBottom": "16px"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"pageTitle",
+				"pageSubtitle"
+			],
+			"linkedNodes": {}
+		},
+		"pageTitle": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "✨ Create New Product",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"color": "var(--text-primary)",
+					"fontSize": "var(--font-size-2xl)",
+					"fontWeight": "var(--font-weight-bold)",
+					"marginBottom": "var(--spacing-sm)",
+					"letterSpacing": "-0.03em"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "headerSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"pageSubtitle": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Fill in the details below to add a new product to your catalog",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"color": "var(--text-secondary)",
+					"fontSize": "var(--font-size-md)",
+					"fontWeight": "var(--font-weight-normal)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "headerSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"mainCard": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "w-full max-w-2xl mx-auto",
+				"role": "region",
+				"classNames": [],
+				"style": {
+					"backgroundColor": "var(--secondary-color)",
+					"borderRadius": "var(--border-radius-lg)",
+					"border": "1px solid var(--border-color)",
+					"boxShadow": "0 1px 3px rgba(0,0,0,0.1)",
+					"overflow": "hidden"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"imageSection",
+				"contentWrapper"
+			],
+			"linkedNodes": {}
+		},
+		"imageSection": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "w-full",
+				"role": "region",
+				"classNames": [],
+				"style": {
+					"backgroundColor": "var(--background-section)",
+					"padding": "var(--spacing-2xl) var(--spacing-xl)",
+					"textAlign": "center",
+					"borderBottom": "1px solid var(--border-color)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "mainCard",
+			"hidden": false,
+			"nodes": [
+				"imageLabel",
+				"imageUploadArea",
+				"imageName"
+			],
+			"linkedNodes": {}
+		},
+		"imageLabel": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "📸 Product Image",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"color": "var(--text-primary)",
+					"fontSize": "var(--font-size-sm)",
+					"fontWeight": "var(--font-weight-semibold)",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.05em",
+					"marginBottom": "var(--spacing-md)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "imageSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"imageUploadArea": {
+			"type": {
+				"resolvedName": "FileUpload"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"text": "Drag & drop or click to upload",
+				"iconPosition": "top",
+				"style": {
+					"border": "2px dashed var(--primary-color)",
+					"borderRadius": "var(--border-radius-md)",
+					"padding": "var(--spacing-xl) var(--spacing-lg)",
+					"backgroundColor": "var(--background-section)",
+					"cursor": "pointer",
+					"transition": "all 0.2s ease",
+					"marginRight": "auto",
+					"marginLeft": "auto"
+				}
+			},
+			"displayName": "File Upload",
+			"custom": {},
+			"parent": "imageSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "YHDbo7dQpP"
+			}
+		},
+		"imageName": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "PNG, JPG or WebP (max. 5MB)",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"color": "var(--text-hint)",
+					"fontSize": "var(--font-size-xs)",
+					"fontWeight": "var(--font-weight-normal)",
+					"marginTop": "var(--spacing-sm)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "imageSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"contentWrapper": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "w-full",
+				"role": "region",
+				"classNames": [],
+				"style": {
+					"padding": "var(--spacing-xl)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "mainCard",
+			"hidden": false,
+			"nodes": [
+				"basicInfoSection",
+				"divider1",
+				"pricingSection",
+				"divider2",
+				"detailsSection",
+				"divider3",
+				"availabilitySection",
+				"buttonContainer"
+			],
+			"linkedNodes": {}
+		},
+		"basicInfoSection": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "mb-6",
+				"role": "region",
+				"classNames": [],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "contentWrapper",
+			"hidden": false,
+			"nodes": [
+				"basicInfoTitle",
+				"productName",
+				"productSKU"
+			],
+			"linkedNodes": {}
+		},
+		"basicInfoTitle": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Basic Information",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"color": "var(--text-primary)",
+					"fontSize": "var(--font-size-lg)",
+					"fontWeight": "var(--font-weight-bold)",
+					"marginBottom": "var(--spacing-md)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "basicInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"formContainer": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "flex flex-col gap-5",
+				"role": "form",
+				"classNames": [],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "basicInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"productName": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"label": "Product Name",
+				"labelPosition": "top",
+				"placeholder": "e.g., Premium Wireless Headphones",
+				"iterableChild": true
+			},
+			"displayName": "Text Input",
+			"custom": {},
+			"parent": "basicInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"input": "nameInput",
+				"label": "nameLabel"
+			}
+		},
+		"productSKU": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"label": "SKU (Stock Keeping Unit)",
+				"labelPosition": "top",
+				"placeholder": "e.g., PHWH-001",
+				"iterableChild": true
+			},
+			"displayName": "Text Input",
+			"custom": {},
+			"parent": "basicInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"input": "skuInput",
+				"label": "skuLabel"
+			}
+		},
+		"nameInput": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"type": "text",
+				"placeholder": "e.g., Premium Wireless Headphones",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"color": "var(--text-primary)",
+					"backgroundColor": "var(--secondary-color)"
+				},
+				"deletable": false,
+				"moveable": false,
+				"revealPassword": true,
+				"twentyFourHours": true,
+				"eyePosition": "right"
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "productName",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"nameLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Product Name",
+				"classNames": [],
+				"events": [],
+				"moveable": false,
+				"deletable": false,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "productName",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"skuInput": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"type": "text",
+				"placeholder": "e.g., PHWH-001",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"color": "var(--text-primary)",
+					"backgroundColor": "var(--secondary-color)"
+				},
+				"deletable": false,
+				"moveable": false,
+				"revealPassword": true,
+				"twentyFourHours": true,
+				"eyePosition": "right"
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "productSKU",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"skuLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "SKU (Stock Keeping Unit)",
+				"classNames": [],
+				"events": [],
+				"moveable": false,
+				"deletable": false,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "productSKU",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"divider1": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"className": "w-full",
+				"classNames": [],
+				"style": {
+					"height": "1px",
+					"backgroundColor": "var(--border-color)",
+					"margin": "var(--spacing-lg) 0"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "contentWrapper",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"pricingSection": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "mb-6",
+				"role": "region",
+				"classNames": [],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "contentWrapper",
+			"hidden": false,
+			"nodes": [
+				"pricingTitle",
+				"priceRow"
+			],
+			"linkedNodes": {}
+		},
+		"pricingTitle": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "💰 Pricing",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"color": "var(--text-primary)",
+					"fontSize": "var(--font-size-lg)",
+					"fontWeight": "var(--font-weight-bold)",
+					"marginBottom": "var(--spacing-md)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "pricingSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"priceRow": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "flex gap-4",
+				"role": "region",
+				"classNames": [],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "pricingSection",
+			"hidden": false,
+			"nodes": [
+				"productPrice",
+				"productCost"
+			],
+			"linkedNodes": {}
+		},
+		"productPrice": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"label": "Selling Price",
+				"labelPosition": "top",
+				"placeholder": "0.00",
+				"iterableChild": true
+			},
+			"displayName": "Text Input",
+			"custom": {},
+			"parent": "priceRow",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"input": "priceInput",
+				"label": "priceLabel"
+			}
+		},
+		"productCost": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"label": "Cost Price",
+				"labelPosition": "top",
+				"placeholder": "0.00",
+				"iterableChild": true
+			},
+			"displayName": "Text Input",
+			"custom": {},
+			"parent": "priceRow",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"input": "costInput",
+				"label": "costLabel"
+			}
+		},
+		"priceInput": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"type": "number",
+				"placeholder": "0.00",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"color": "var(--text-primary)",
+					"backgroundColor": "var(--secondary-color)"
+				},
+				"deletable": false,
+				"moveable": false,
+				"revealPassword": true,
+				"twentyFourHours": true,
+				"eyePosition": "right"
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "productPrice",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"priceLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Selling Price",
+				"classNames": [],
+				"events": [],
+				"moveable": false,
+				"deletable": false,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "productPrice",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"costInput": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"type": "number",
+				"placeholder": "0.00",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"color": "var(--text-primary)",
+					"backgroundColor": "var(--secondary-color)"
+				},
+				"deletable": false,
+				"moveable": false,
+				"revealPassword": true,
+				"twentyFourHours": true,
+				"eyePosition": "right",
+				"intervals": []
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "productCost",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"costLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Cost Price",
+				"classNames": [],
+				"events": [],
+				"moveable": false,
+				"deletable": false,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "productCost",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"divider2": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"className": "w-full",
+				"classNames": [],
+				"style": {
+					"height": "1px",
+					"backgroundColor": "var(--border-color)",
+					"margin": "var(--spacing-lg) 0"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "contentWrapper",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"detailsSection": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "mb-6",
+				"role": "region",
+				"classNames": [],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "contentWrapper",
+			"hidden": false,
+			"nodes": [
+				"detailsTitle",
+				"detailsRow"
+			],
+			"linkedNodes": {}
+		},
+		"detailsTitle": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "📋 Product Details",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"color": "var(--text-primary)",
+					"fontSize": "var(--font-size-lg)",
+					"fontWeight": "var(--font-weight-bold)",
+					"marginBottom": "var(--spacing-md)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "detailsSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"detailsRow": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "flex gap-4",
+				"role": "region",
+				"classNames": [],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "detailsSection",
+			"hidden": false,
+			"nodes": [
+				"productCategory",
+				"productDescription"
+			],
+			"linkedNodes": {}
+		},
+		"productCategory": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"label": "Category",
+				"labelPosition": "top",
+				"placeholder": "e.g., Electronics",
+				"iterableChild": true
+			},
+			"displayName": "Text Input",
+			"custom": {},
+			"parent": "detailsRow",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"input": "categoryInput",
+				"label": "categoryLabel"
+			}
+		},
+		"productDescription": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"label": "Description",
+				"labelPosition": "top",
+				"placeholder": "Brief product description",
+				"iterableChild": true
+			},
+			"displayName": "Text Input",
+			"custom": {},
+			"parent": "detailsRow",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"input": "descriptionInput",
+				"label": "descriptionLabel"
+			}
+		},
+		"categoryInput": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"type": "text",
+				"placeholder": "e.g., Electronics",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"color": "var(--text-primary)",
+					"backgroundColor": "var(--secondary-color)"
+				},
+				"deletable": false,
+				"moveable": false,
+				"revealPassword": true,
+				"twentyFourHours": true,
+				"eyePosition": "right"
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "productCategory",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"categoryLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Category",
+				"classNames": [],
+				"events": [],
+				"moveable": false,
+				"deletable": false,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "productCategory",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"descriptionInput": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"type": "text",
+				"placeholder": "Brief product description",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"color": "var(--text-primary)",
+					"backgroundColor": "var(--secondary-color)"
+				},
+				"deletable": false,
+				"moveable": false,
+				"revealPassword": true,
+				"twentyFourHours": true,
+				"eyePosition": "right"
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "productDescription",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"descriptionLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Description",
+				"classNames": [],
+				"events": [],
+				"moveable": false,
+				"deletable": false,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "productDescription",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"divider3": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"className": "w-full",
+				"classNames": [],
+				"style": {
+					"height": "1px",
+					"backgroundColor": "var(--border-color)",
+					"margin": "var(--spacing-lg) 0"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "contentWrapper",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"availabilitySection": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "mb-8",
+				"role": "region",
+				"classNames": [],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "contentWrapper",
+			"hidden": false,
+			"nodes": [
+				"availabilityTitle",
+				"availabilityRow"
+			],
+			"linkedNodes": {}
+		},
+		"availabilityTitle": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "📦 Availability & Stock",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"color": "var(--text-primary)",
+					"fontSize": "var(--font-size-lg)",
+					"fontWeight": "var(--font-weight-bold)",
+					"marginBottom": "var(--spacing-md)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "availabilitySection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"availabilityRow": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "flex gap-4",
+				"role": "region",
+				"classNames": [],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "availabilitySection",
+			"hidden": false,
+			"nodes": [
+				"productQuantity",
+				"productInStock"
+			],
+			"linkedNodes": {}
+		},
+		"productQuantity": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"label": "Quantity in Stock",
+				"labelPosition": "top",
+				"placeholder": "0",
+				"iterableChild": true
+			},
+			"displayName": "Text Input",
+			"custom": {},
+			"parent": "availabilityRow",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"input": "quantityInput",
+				"label": "quantityLabel"
+			}
+		},
+		"quantityInput": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"type": "number",
+				"placeholder": "0",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"color": "var(--text-primary)",
+					"backgroundColor": "var(--secondary-color)"
+				},
+				"deletable": false,
+				"moveable": false,
+				"revealPassword": true,
+				"twentyFourHours": true,
+				"eyePosition": "right"
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "productQuantity",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"quantityLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Quantity in Stock",
+				"classNames": [],
+				"events": [],
+				"moveable": false,
+				"deletable": false,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "productQuantity",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"productInStock": {
+			"type": {
+				"resolvedName": "Checkbox"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"label": "Available for Sale",
+				"type": "checkbox",
+				"size": "medium",
+				"variant": "checkbox",
+				"labelPosition": "left",
+				"iterableChild": true
+			},
+			"displayName": "CheckBox",
+			"custom": {},
+			"parent": "availabilityRow",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "inStockLabel",
+				"input": "inStockInput",
+				"CheckboxInput": "gGK7jd_Ol7"
+			}
+		},
+		"inStockLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Available for Sale",
+				"classNames": [],
+				"events": [],
+				"moveable": false,
+				"deletable": false,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "productInStock",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"inStockInput": {
+			"type": {
+				"resolvedName": "CheckboxInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"type": "checkbox",
+				"className": "w-full",
+				"style": {
+					"accentColor": "var(--primary-color)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Checkbox Input",
+			"custom": {},
+			"parent": "productInStock",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"buttonContainer": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"className": "flex gap-3",
+				"role": "group",
+				"classNames": [],
+				"style": {
+					"marginTop": "var(--spacing-xl)",
+					"paddingTop": "var(--spacing-lg)",
+					"borderTop": "1px solid var(--border-color)"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "contentWrapper",
+			"hidden": false,
+			"nodes": [
+				"submitButton",
+				"cancelButton"
+			],
+			"linkedNodes": {}
+		},
+		"submitButton": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "✨ Create Product",
+				"classNames": [],
+				"events": [],
+				"style": {
+					"backgroundColor": "var(--primary-color)",
+					"color": "var(--secondary-color)",
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "none",
+					"padding": "10px 24px",
+					"fontSize": "var(--font-size-base)",
+					"fontWeight": "var(--font-weight-medium)",
+					"cursor": "pointer",
+					"transition": "all 0.2s ease"
+				},
+				"iconPosition": "hidden"
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "buttonContainer",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "bc-gWavlHK"
+			}
+		},
+		"cancelButton": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Cancel",
+				"classNames": [],
+				"events": [],
+				"style": {
+					"backgroundColor": "var(--secondary-color)",
+					"color": "var(--primary-color)",
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--primary-color)",
+					"padding": "10px 24px",
+					"fontSize": "var(--font-size-base)",
+					"fontWeight": "var(--font-weight-medium)",
+					"cursor": "pointer",
+					"transition": "all 0.2s ease"
+				},
+				"iconPosition": "hidden"
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "buttonContainer",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "75IhDt_WgV"
+			}
+		},
+		"YHDbo7dQpP": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-regular fa-star"
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "imageUploadArea",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"gGK7jd_Ol7": {
+			"type": {
+				"resolvedName": "CheckboxInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"deletable": false,
+				"iterableChild": true
+			},
+			"displayName": "Checkbox Input",
+			"custom": {},
+			"parent": "productInStock",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"bc-gWavlHK": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-regular fa-star"
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "submitButton",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"75IhDt_WgV": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-regular fa-star"
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "cancelButton",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		}
+	}
+}

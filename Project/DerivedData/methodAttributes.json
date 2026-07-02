@@ -3,13 +3,6 @@
 		"add": {
 			"timeStamp": "2026-07-02T00:00:25Z"
 		},
-		"debugSessionLog": {
-			"timeStamp": "2026-07-02T03:30:38Z",
-			"attributes": {
-				"executedOnServer": false,
-				"preemptive": false
-			}
-		},
 		"divide": {
 			"timeStamp": "2026-07-02T00:01:15Z"
 		},

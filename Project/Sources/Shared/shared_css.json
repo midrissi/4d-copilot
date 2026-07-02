@@ -1,3 +1,16 @@
 {
-	"classes": []
+	"classes": [
+		{
+			"name": "variables",
+			"content": ":root {\n  --primary-color: #6366F1;\n  --secondary-color: #FFFFFF;\n  --text-primary: #0A0A0A;\n  --text-secondary: #6B6B6B;\n  --text-hint: #9C9C9C;\n  --border-color: #E8E8EC;\n  --background-page: #FAFAFA;\n  --background-section: #F0F1FF;\n  --border-radius-sm: 6px;\n  --border-radius-md: 8px;\n  --border-radius-lg: 12px;\n  --spacing-xs: 4px;\n  --spacing-sm: 8px;\n  --spacing-md: 16px;\n  --spacing-lg: 24px;\n  --spacing-xl: 32px;\n  --spacing-2xl: 40px;\n  --font-size-xs: 12px;\n  --font-size-sm: 13px;\n  --font-size-base: 14px;\n  --font-size-md: 15px;\n  --font-size-lg: 16px;\n  --font-size-2xl: 36px;\n  --font-weight-normal: 400;\n  --font-weight-medium: 500;\n  --font-weight-semibold: 600;\n  --font-weight-bold: 700;\n}",
+			"parentId": null,
+			"id": "77wfY3Wds-PBJiEHhl61d"
+		},
+		{
+			"name": "css_classes_examples",
+			"content": "self {\n background-color: red;\n}",
+			"parentId": null,
+			"id": "NOCOAlzueLyJlabRFHaiO"
+		}
+	]
 }
