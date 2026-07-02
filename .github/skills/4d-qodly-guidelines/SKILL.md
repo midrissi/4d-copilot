@@ -1,12 +1,18 @@
 ---
 name: 4d-qodly-guidelines
 user-invocable: true
-description: "Use when writing, reviewing, or refactoring 4D/Qodly code; 4D syntax rules; Storage shared object rules; Use block thread-safety; collection callback patterns; and project method conventions."
+description: "ALWAYS use when asked to write 4D code, generate 4D methods/classes, or modify 4D/Qodly code. Also use for reviewing/refactoring 4D code, 4D syntax rules, Storage shared object rules, Use block thread-safety, collection callback patterns, and method conventions."
 ---
 
 # 4D Qodly Guidelines
 
 Use this skill for day-to-day coding in this 4D/Qodly project.
+
+## Mandatory Invocation
+
+- If the user asks to write 4D code, this skill must be invoked.
+- If the task edits `.4dm` files, this skill must be invoked.
+- Apply these rules before proposing or editing 4D code.
 
 ## Official Docs
 
