@@ -1,3 +1,23 @@
 {
-	"methods": {}
+	"methods": {
+		"add": {
+			"timeStamp": "2026-07-02T00:00:25Z"
+		},
+		"debugSessionLog": {
+			"timeStamp": "2026-07-02T01:08:16Z",
+			"attributes": {
+				"executedOnServer": false,
+				"preemptive": false
+			}
+		},
+		"divide": {
+			"timeStamp": "2026-07-02T00:01:15Z"
+		},
+		"multiply": {
+			"timeStamp": "2026-07-01T23:52:43Z"
+		},
+		"subtract": {
+			"timeStamp": "2026-07-01T23:52:43Z"
+		}
+	}
 }

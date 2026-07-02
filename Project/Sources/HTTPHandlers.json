@@ -1,0 +1,14 @@
+[
+	{
+		"class": "UsersHandling",
+		"method": "handleRequest",
+		"regexPattern": "/api/users/[^/]+",
+		"verbs": "GET, PUT, DELETE"
+	},
+	{
+		"class": "UsersHandling",
+		"method": "handleRequest",
+		"regexPattern": "/api/users",
+		"verbs": "GET, POST"
+	}
+]

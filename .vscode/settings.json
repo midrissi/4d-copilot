@@ -1,0 +1,16 @@
+{
+  "[4d]": {
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": false,
+      "strings": false
+    },
+    "editor.defaultFormatter": "4D.4d-analyzer"
+  },
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": false,
+    "strings": false
+  }
+}
