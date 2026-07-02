@@ -99,6 +99,18 @@ var $idx : Integer := Storage.users.findIndex(Formula($1.value.name="John"))
 
 Do not use `$1.id` directly.
 
+## Mock REST APIs
+
+Three in-memory CRUD APIs are implemented as shared singleton classes registered in `HTTPHandlers.json`.
+
+| API | Class | Endpoints | Fields | Storage Keys |
+|-----|-------|-----------|--------|--------------|
+| Users | `UsersHandling` | `/api/users`, `/api/users/:id` | `id`, `name`, `email` | `Storage.users`, `Storage.app.nextId` |
+| Products | `ProductsHandling` | `/api/products`, `/api/products/:id` | `id`, `name`, `price`, `category`, `inStock` | `Storage.products`, `Storage.productsApp.nextId` |
+| Companies | `CompaniesHandling` | `/api/companies`, `/api/companies/:id` | `id`, `name`, `industry`, `size` (default `"Small"`), `website` | `Storage.companies`, `Storage.companiesApp.nextId` |
+
+All responses use the `ResponseHelper` wrapper: `{ "success": true, "result": ... }` or `{ "success": false, "error": "..." }`.
+
 ## Project Methods
 
 Do not rely on a hardcoded list of methods.
