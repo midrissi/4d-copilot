@@ -6,12 +6,12 @@ shared singleton Class constructor()
 	// POST   /api/users        -> create user { name, email }
 	// PUT    /api/users/:id    -> update user { name?, email? }
 	// DELETE /api/users/:id    -> delete user
-
+	
 Function handleRequest($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingMessage
 	var $response : 4D:C1709.OutgoingMessage:=4D:C1709.OutgoingMessage.new()
 	$response.setHeader("Content-Type"; "application/json")
 	
-	This._bootstrap()
+	This:C1470._bootstrap()
 	
 	var $userId : Text:=""
 	If ($request.urlPath.length>2)
@@ -20,22 +20,22 @@ Function handleRequest($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingM
 	
 	Case of 
 		: ($request.verb="GET") & ($userId="")
-			This._listUsers($response)
+			This:C1470._listUsers($response)
 		: ($request.verb="GET") & ($userId#"")
-			This._getUser($userId; $response)
+			This:C1470._getUser($userId; $response)
 		: ($request.verb="POST")
-			This._createUser($request.getJSON(); $response)
+			This:C1470._createUser($request.getJSON(); $response)
 		: ($request.verb="PUT") & ($userId#"")
-			This._updateUser($userId; $request.getJSON(); $response)
+			This:C1470._updateUser($userId; $request.getJSON(); $response)
 		: ($request.verb="DELETE") & ($userId#"")
-			This._deleteUser($userId; $response)
+			This:C1470._deleteUser($userId; $response)
 		Else 
 			$response.statusCode:=405
 			$response.setBody(cs:C1710.ResponseHelper.me.error("Method not allowed"))
 	End case 
 	
 	return $response
-
+	
 Function _bootstrap()
 	Use (Storage:C1525)
 		If (Storage:C1525.app=Null:C1517)
@@ -45,11 +45,11 @@ Function _bootstrap()
 			Storage:C1525.users:=New shared collection:C1527
 		End if 
 	End use 
-
+	
 Function _listUsers($response : 4D:C1709.OutgoingMessage)
 	$response.statusCode:=200
 	$response.setBody(cs:C1710.ResponseHelper.me.success(Storage:C1525.users))
-
+	
 Function _getUser($id : Text; $response : 4D:C1709.OutgoingMessage)
 	var $found : Object:=Storage:C1525.users.find(Formula:C1597($1.value.id=$id))
 	If ($found#Null:C1517)
@@ -59,7 +59,7 @@ Function _getUser($id : Text; $response : 4D:C1709.OutgoingMessage)
 		$response.statusCode:=404
 		$response.setBody(cs:C1710.ResponseHelper.me.error("User not found"))
 	End if 
-
+	
 Function _createUser($body : Object; $response : 4D:C1709.OutgoingMessage)
 	var $nextId : Integer
 	Use (Storage:C1525.app)
@@ -81,7 +81,7 @@ Function _createUser($body : Object; $response : 4D:C1709.OutgoingMessage)
 	
 	$response.statusCode:=201
 	$response.setBody(cs:C1710.ResponseHelper.me.success($user))
-
+	
 Function _updateUser($id : Text; $body : Object; $response : 4D:C1709.OutgoingMessage)
 	var $idx : Integer
 	var $updated : Object
@@ -104,7 +104,7 @@ Function _updateUser($id : Text; $body : Object; $response : 4D:C1709.OutgoingMe
 		$response.statusCode:=404
 		$response.setBody(cs:C1710.ResponseHelper.me.error("User not found"))
 	End if 
-
+	
 Function _deleteUser($id : Text; $response : 4D:C1709.OutgoingMessage)
 	var $idx : Integer:=Storage:C1525.users.findIndex(Formula:C1597($1.value.id=$id))
 	If ($idx>=0)
@@ -116,5 +116,5 @@ Function _deleteUser($id : Text; $response : 4D:C1709.OutgoingMessage)
 	Else 
 		$response.statusCode:=404
 		$response.setBody(cs:C1710.ResponseHelper.me.error("User not found"))
-	End if
+	End if 
 	
