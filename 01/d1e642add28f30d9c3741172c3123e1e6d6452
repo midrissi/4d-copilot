@@ -1,0 +1,24 @@
+.github/skills/4d-qodly-guidelines/SKILL.md
+  s_94144d3db2b2b6::t_fcb72d22216eff 40-58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "01d1e642add28f30d9c3741172c3123e1e6d6452",
+  "prompts": {},
+  "humans": {
+    "h_90186079e5a8a0": {
+      "author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  },
+  "sessions": {
+    "s_94144d3db2b2b6": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "e1348fff-9181-41ae-a871-a5e75c34de9e",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  }
+}
