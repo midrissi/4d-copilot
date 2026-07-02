@@ -22,6 +22,12 @@
       "value": "1",
       "type": "string",
       "description": "ID of the target product"
+    },
+    {
+      "key": "companyId",
+      "value": "1",
+      "type": "string",
+      "description": "ID of the target company"
     }
   ],
   "item": [
@@ -254,6 +260,123 @@
               "path": ["api", "products", "{{productId}}"]
             },
             "description": "Delete a product by ID."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Companies API",
+      "item": [
+        {
+          "name": "📋 List all companies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/companies",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "companies"]
+            },
+            "description": "Retrieve all companies stored in memory."
+          },
+          "response": []
+        },
+        {
+          "name": "🔍 Get company by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/companies/{{companyId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "companies", "{{companyId}}"]
+            },
+            "description": "Retrieve one company by ID."
+          },
+          "response": []
+        },
+        {
+          "name": "➕ Create company",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Acme Corp\",\n  \"industry\": \"Technology\",\n  \"size\": \"Medium\",\n  \"website\": \"https://acme.example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/companies",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "companies"]
+            },
+            "description": "Create a new company."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var json = pm.response.json();",
+                  "if (json.success && json.result && json.result.id) {",
+                  "    pm.collectionVariables.set('companyId', json.result.id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "response": []
+        },
+        {
+          "name": "✏️ Update company",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Acme Corporation\",\n  \"industry\": \"Software\",\n  \"size\": \"Large\",\n  \"website\": \"https://acme-corp.example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/companies/{{companyId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "companies", "{{companyId}}"]
+            },
+            "description": "Update an existing company by ID."
+          },
+          "response": []
+        },
+        {
+          "name": "🗑️ Delete company",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/companies/{{companyId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "companies", "{{companyId}}"]
+            },
+            "description": "Delete a company by ID."
           },
           "response": []
         }

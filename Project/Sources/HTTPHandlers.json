@@ -22,5 +22,17 @@
 		"method": "handleRequest",
 		"regexPattern": "/api/users",
 		"verbs": "GET, POST"
+	},
+	{
+		"class": "CompaniesHandling",
+		"method": "handleRequest",
+		"regexPattern": "/api/companies/[^/]+",
+		"verbs": "GET, PUT, DELETE"
+	},
+	{
+		"class": "CompaniesHandling",
+		"method": "handleRequest",
+		"regexPattern": "/api/companies",
+		"verbs": "GET, POST"
 	}
 ]
