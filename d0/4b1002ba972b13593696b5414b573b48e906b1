@@ -1,0 +1,34 @@
+.github/prompts/create-http-handler.prompt.md
+  s_d135180f4437c6::t_8493861c21b4eb 1-25
+.github/prompts/create-webform.prompt.md
+  s_296248cceefdfe::t_5b560eaa2b5382 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "d04b1002ba972b13593696b5414b573b48e906b1",
+  "prompts": {},
+  "humans": {
+    "h_90186079e5a8a0": {
+      "author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  },
+  "sessions": {
+    "s_296248cceefdfe": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "3f30bc2c-4411-4ec7-aece-d8a8f99b8159",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    },
+    "s_d135180f4437c6": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "1bba4a7a-7c8d-46b0-be91-acee6ec00845",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  }
+}
