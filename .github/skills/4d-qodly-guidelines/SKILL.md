@@ -37,6 +37,25 @@ Example declaration pattern:
 #DECLARE($param1 : Type; $param2 : Type)->$result : Type
 ```
 
+## Object and Collection Literals
+
+4D **does not support** declaring literal objects or collections across multiple lines without line continuation. Use backslashes (`\`) to extend a statement across lines.
+
+**Pattern:**
+
+```4d
+var $myObject : Object
+
+$myObject:={ \
+	name: "John Doe", \
+	age: 30, \
+	city: "New York", \
+	skills: New collection("4D"; "SQL"; "JavaScript") \
+}
+```
+
+Each line except the last must end with a backslash to continue. The closing brace stays on the last line without a backslash.
+
 ## Storage Rules (Critical)
 
 Storage properties must be one of:
