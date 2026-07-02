@@ -1,0 +1,23 @@
+Project/Sources/Classes/ProductsHandling.4dm
+  s_db967d8e1d9034::t_e0faa32dc4bd8b 1-131
+Project/Sources/api_documentation.postman_collection.json
+  s_db967d8e1d9034::t_f10b82e525f664 1-263
+Project/Sources/HTTPHandlers.json
+  s_db967d8e1d9034::t_1247bf5a6da72f 2-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "ecc940f154ac327b0928d471e0832d84dc4c73f9",
+  "prompts": {},
+  "sessions": {
+    "s_db967d8e1d9034": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "f3b4dee7-1bb8-4d17-a087-2c8118ee2bb3",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  }
+}
