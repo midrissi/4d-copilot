@@ -1,0 +1,953 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": [],
+		"currentState": "root"
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"airyMode": false,
+				"className": "w-full",
+				"style": {
+					"backgroundColor": "var(--background-page)",
+					"minHeight": "100vh",
+					"display": "flex",
+					"flexDirection": "column",
+					"padding": "var(--spacing-lg)"
+				}
+			},
+			"displayName": "Page",
+			"custom": {},
+			"parent": "",
+			"hidden": false,
+			"nodes": [
+				"pageHeader",
+				"mainContent"
+			],
+			"linkedNodes": {}
+		},
+		"pageHeader": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"marginBottom": "var(--spacing-2xl)",
+					"textAlign": "center"
+				}
+			},
+			"displayName": "Page Header",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"headerIcon",
+				"headerTitle",
+				"headerSubtitle"
+			],
+			"linkedNodes": {}
+		},
+		"headerIcon": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"icon": "fa-solid fa-user-plus",
+				"classNames": [],
+				"events": [],
+				"style": {
+					"fontSize": "48px",
+					"color": "var(--primary-color)",
+					"marginBottom": "var(--spacing-md)"
+				}
+			},
+			"displayName": "Header Icon",
+			"custom": {},
+			"parent": "pageHeader",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"headerTitle": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Welcome to User Management",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"style": {
+					"fontSize": "var(--font-size-2xl)",
+					"fontWeight": "var(--font-weight-bold)",
+					"color": "var(--text-primary)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Header Title",
+			"custom": {
+				"__t": {
+					"doc": []
+				}
+			},
+			"parent": "pageHeader",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"headerSubtitle": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Create and manage user accounts with ease",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"style": {
+					"fontSize": "var(--font-size-base)",
+					"color": "var(--text-secondary)",
+					"fontWeight": "var(--font-weight-normal)"
+				}
+			},
+			"displayName": "Header Subtitle",
+			"custom": {
+				"__t": {
+					"doc": []
+				}
+			},
+			"parent": "pageHeader",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"mainContent": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"justifyContent": "center",
+					"gap": "var(--spacing-lg)"
+				}
+			},
+			"displayName": "Main Content",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"formColumn"
+			],
+			"linkedNodes": {}
+		},
+		"formColumn": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "100%",
+					"maxWidth": "600px"
+				}
+			},
+			"displayName": "Form Column",
+			"custom": {},
+			"parent": "mainContent",
+			"hidden": false,
+			"nodes": [
+				"formCard"
+			],
+			"linkedNodes": {}
+		},
+		"formCard": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"padding": "var(--spacing-xl)",
+					"backgroundColor": "var(--secondary-color)",
+					"borderRadius": "var(--border-radius-lg)",
+					"border": "1px solid var(--border-color)",
+					"boxShadow": "0 2px 8px rgba(0,0,0,0.08)"
+				}
+			},
+			"displayName": "Form Card",
+			"custom": {},
+			"parent": "formColumn",
+			"hidden": false,
+			"nodes": [
+				"formTitle",
+				"personalInfoSection",
+				"contactInfoSection",
+				"accountSettingsSection",
+				"formActions"
+			],
+			"linkedNodes": {}
+		},
+		"formTitle": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "New User Profile",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"style": {
+					"fontSize": "var(--font-size-lg)",
+					"fontWeight": "var(--font-weight-bold)",
+					"color": "var(--text-primary)",
+					"marginBottom": "var(--spacing-lg)",
+					"paddingBottom": "var(--spacing-md)",
+					"borderBottom": "2px solid var(--border-color)"
+				}
+			},
+			"displayName": "Form Title",
+			"custom": {
+				"__t": {
+					"doc": []
+				}
+			},
+			"parent": "formCard",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"personalInfoSection": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"marginBottom": "var(--spacing-lg)",
+					"paddingBottom": "var(--spacing-lg)",
+					"borderBottom": "1px solid var(--border-color)"
+				}
+			},
+			"displayName": "Personal Info Section",
+			"custom": {},
+			"parent": "formCard",
+			"hidden": false,
+			"nodes": [
+				"sectionLabel1",
+				"firstNameInput",
+				"lastNameInput"
+			],
+			"linkedNodes": {}
+		},
+		"sectionLabel1": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Personal Information",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"style": {
+					"fontSize": "var(--font-size-sm)",
+					"fontWeight": "var(--font-weight-semibold)",
+					"color": "var(--primary-color)",
+					"marginBottom": "var(--spacing-md)",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.5px"
+				}
+			},
+			"displayName": "Section Label 1",
+			"custom": {
+				"__t": {
+					"doc": []
+				}
+			},
+			"parent": "personalInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"firstNameInput": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"label": "First Name",
+				"labelPosition": "top",
+				"placeholder": "e.g. John"
+			},
+			"displayName": "First Name Input",
+			"custom": {},
+			"parent": "personalInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "firstNameLabel",
+				"input": "firstNameField"
+			}
+		},
+		"firstNameLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "First Name",
+				"moveable": false,
+				"deletable": true,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "First Name Label",
+			"custom": {},
+			"parent": "firstNameInput",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"firstNameField": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"type": "text",
+				"placeholder": "e.g. John",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-md)",
+					"transition": "border-color 0.2s"
+				}
+			},
+			"displayName": "First Name Field",
+			"custom": {},
+			"parent": "firstNameInput",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"lastNameInput": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"label": "Last Name",
+				"labelPosition": "top",
+				"placeholder": "e.g. Doe"
+			},
+			"displayName": "Last Name Input",
+			"custom": {},
+			"parent": "personalInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "lastNameLabel",
+				"input": "lastNameField"
+			}
+		},
+		"lastNameLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Last Name",
+				"moveable": false,
+				"deletable": true,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Last Name Label",
+			"custom": {},
+			"parent": "lastNameInput",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"lastNameField": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"type": "text",
+				"placeholder": "e.g. Doe",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)"
+				}
+			},
+			"displayName": "Last Name Field",
+			"custom": {},
+			"parent": "lastNameInput",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"contactInfoSection": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"marginBottom": "var(--spacing-lg)",
+					"paddingBottom": "var(--spacing-lg)",
+					"borderBottom": "1px solid var(--border-color)"
+				}
+			},
+			"displayName": "Contact Info Section",
+			"custom": {},
+			"parent": "formCard",
+			"hidden": false,
+			"nodes": [
+				"sectionLabel2",
+				"emailInput",
+				"phoneInput"
+			],
+			"linkedNodes": {}
+		},
+		"sectionLabel2": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Contact Information",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"style": {
+					"fontSize": "var(--font-size-sm)",
+					"fontWeight": "var(--font-weight-semibold)",
+					"color": "var(--primary-color)",
+					"marginBottom": "var(--spacing-md)",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.5px"
+				}
+			},
+			"displayName": "Section Label 2",
+			"custom": {
+				"__t": {
+					"doc": []
+				}
+			},
+			"parent": "contactInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"emailInput": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"label": "Email Address",
+				"labelPosition": "top",
+				"placeholder": "john.doe@example.com"
+			},
+			"displayName": "Email Input",
+			"custom": {},
+			"parent": "contactInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "emailLabel",
+				"input": "emailField"
+			}
+		},
+		"emailLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Email Address",
+				"moveable": false,
+				"deletable": true,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Email Label",
+			"custom": {},
+			"parent": "emailInput",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"emailField": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"type": "email",
+				"placeholder": "john.doe@example.com",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-md)"
+				}
+			},
+			"displayName": "Email Field",
+			"custom": {},
+			"parent": "emailInput",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"phoneInput": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"label": "Phone Number",
+				"labelPosition": "top",
+				"placeholder": "+1 (555) 123-4567"
+			},
+			"displayName": "Phone Input",
+			"custom": {},
+			"parent": "contactInfoSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "phoneLabel",
+				"input": "phoneField"
+			}
+		},
+		"phoneLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Phone Number",
+				"moveable": false,
+				"deletable": true,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Phone Label",
+			"custom": {},
+			"parent": "phoneInput",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"phoneField": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"type": "tel",
+				"placeholder": "+1 (555) 123-4567",
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)"
+				}
+			},
+			"displayName": "Phone Field",
+			"custom": {},
+			"parent": "phoneInput",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"accountSettingsSection": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"marginBottom": "var(--spacing-lg)"
+				}
+			},
+			"displayName": "Account Settings Section",
+			"custom": {},
+			"parent": "formCard",
+			"hidden": false,
+			"nodes": [
+				"sectionLabel3",
+				"roleSelect",
+				"statusCheckbox"
+			],
+			"linkedNodes": {}
+		},
+		"sectionLabel3": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Account Settings",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"style": {
+					"fontSize": "var(--font-size-sm)",
+					"fontWeight": "var(--font-weight-semibold)",
+					"color": "var(--primary-color)",
+					"marginBottom": "var(--spacing-md)",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.5px"
+				}
+			},
+			"displayName": "Section Label 3",
+			"custom": {
+				"__t": {
+					"doc": []
+				}
+			},
+			"parent": "accountSettingsSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"roleSelect": {
+			"type": {
+				"resolvedName": "SelectInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"label": "User Role",
+				"placeholder": "Select a role"
+			},
+			"displayName": "Role Select",
+			"custom": {},
+			"parent": "accountSettingsSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "roleLabel",
+				"select": "roleDropdown"
+			}
+		},
+		"roleLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "User Role",
+				"moveable": false,
+				"deletable": true,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-sm)"
+				}
+			},
+			"displayName": "Role Label",
+			"custom": {},
+			"parent": "roleSelect",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"roleDropdown": {
+			"type": {
+				"resolvedName": "Select"
+			},
+			"isCanvas": false,
+			"props": {
+				"options": [
+					{
+						"id": "admin",
+						"label": "Administrator",
+						"value": "admin"
+					},
+					{
+						"id": "manager",
+						"label": "Manager",
+						"value": "manager"
+					},
+					{
+						"id": "user",
+						"label": "User",
+						"value": "user"
+					},
+					{
+						"id": "guest",
+						"label": "Guest",
+						"value": "guest"
+					}
+				],
+				"showEmptyOption": true,
+				"className": "w-full",
+				"style": {
+					"borderRadius": "var(--border-radius-sm)",
+					"border": "1px solid var(--border-color)",
+					"padding": "10px 14px",
+					"fontSize": "var(--font-size-base)",
+					"marginBottom": "var(--spacing-md)"
+				}
+			},
+			"displayName": "Role Dropdown",
+			"custom": {},
+			"parent": "roleSelect",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"statusCheckbox": {
+			"type": {
+				"resolvedName": "Checkbox"
+			},
+			"isCanvas": false,
+			"props": {
+				"label": "Account Active",
+				"type": "checkbox",
+				"size": "medium"
+			},
+			"displayName": "Status Checkbox",
+			"custom": {},
+			"parent": "accountSettingsSection",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "statusLabel",
+				"input": "statusInput"
+			}
+		},
+		"statusLabel": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Account Active",
+				"moveable": false,
+				"deletable": true,
+				"style": {
+					"color": "var(--text-primary)",
+					"fontWeight": "var(--font-weight-medium)",
+					"fontSize": "var(--font-size-base)"
+				}
+			},
+			"displayName": "Status Label",
+			"custom": {},
+			"parent": "statusCheckbox",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"statusInput": {
+			"type": {
+				"resolvedName": "CheckboxInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"type": "checkbox",
+				"className": "w-full",
+				"style": {
+					"marginBottom": "var(--spacing-lg)"
+				}
+			},
+			"displayName": "Status Input",
+			"custom": {},
+			"parent": "statusCheckbox",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"formActions": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"gap": "var(--spacing-md)",
+					"justifyContent": "space-between"
+				}
+			},
+			"displayName": "Form Actions",
+			"custom": {},
+			"parent": "formCard",
+			"hidden": false,
+			"nodes": [
+				"resetButton",
+				"createButton"
+			],
+			"linkedNodes": {}
+		},
+		"resetButton": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Reset",
+				"iconPosition": "left",
+				"events": [],
+				"style": {
+					"backgroundColor": "transparent",
+					"color": "var(--text-secondary)",
+					"borderRadius": "var(--border-radius-sm)",
+					"padding": "12px 24px",
+					"fontSize": "var(--font-size-base)",
+					"fontWeight": "var(--font-weight-medium)",
+					"border": "1px solid var(--border-color)",
+					"cursor": "pointer",
+					"flex": "1"
+				}
+			},
+			"displayName": "Reset Button",
+			"custom": {},
+			"parent": "formActions",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"createButton": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Create User",
+				"iconPosition": "left",
+				"events": [],
+				"style": {
+					"backgroundColor": "var(--primary-color)",
+					"color": "var(--secondary-color)",
+					"borderRadius": "var(--border-radius-sm)",
+					"padding": "12px 24px",
+					"fontSize": "var(--font-size-base)",
+					"fontWeight": "var(--font-weight-medium)",
+					"border": "none",
+					"cursor": "pointer",
+					"flex": "1"
+				}
+			},
+			"displayName": "Create Button",
+			"custom": {},
+			"parent": "formActions",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		}
+	}
+}

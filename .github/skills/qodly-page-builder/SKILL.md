@@ -145,9 +145,24 @@ A `.WebForm` file contains:
     "childId1": {
       "type": { "resolvedName": "Text" },
       "isCanvas": false,
-      "props": { "text": "Hello World" },
+      "props": {
+        "doc": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Hello World",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false
+              }
+            ]
+          }
+        ]
+      },
       "displayName": "Text",
-      "custom": {},
+      "custom": { "__t": { "doc": [] } },
       "parent": "ROOT",
       "hidden": false,
       "nodes": [],
@@ -199,6 +214,81 @@ A `.WebForm` file contains:
 - `hidden`: Boolean to hide component
 - `style`: Object with CSS properties (`backgroundColor`, `borderRadius`, etc.) — **see React Inline Style Format below**
 - `displayName`: Human-readable label in the builder
+
+## Text Component: ProseMirror Format
+
+The **Text** component uses a `doc` prop containing ProseMirror format instead of a simple `text` prop. This enables rich text with formatting like bold, italic, underline, and strikethrough.
+
+### ProseMirror Structure
+
+```json
+"props": {
+  "doc": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "Simple text",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false
+        }
+      ]
+    }
+  ]
+}
+```
+
+### With Formatting
+
+```json
+"props": {
+  "doc": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "text": "This is ",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false
+        },
+        {
+          "text": "bold text",
+          "bold": true,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false
+        },
+        {
+          "text": " and ",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false
+        },
+        {
+          "text": "underlined",
+          "bold": false,
+          "italic": false,
+          "underlined": true,
+          "strikethrough": false
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Key Rules
+
+1. **Always use `doc` array**: Each Text component must have `"doc": [...]`
+2. **Paragraph structure**: Each paragraph is `{ "type": "paragraph", "children": [...] }`
+3. **Text objects**: Each text span has properties: `text`, `bold`, `italic`, `underlined`, `strikethrough`
+4. **Include `custom` object**: Add `"custom": { "__t": { "doc": [] } }` to Text components
+5. **Formatting flags**: Boolean values control formatting for each text span
 
 ## React Inline Style Format
 
@@ -346,9 +436,20 @@ The `props.style` property must always be a **valid React CSS object** or omitte
   "type": { "resolvedName": "Text" },
   "isCanvas": false,
   "props": {
-    "text": "New text",
-    "classNames": [],
-    "events": []
+    "doc": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "New text",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false
+          }
+        ]
+      }
+    ]
   },
   "displayName": "Text",
   "custom": { "__t": { "doc": [] } },
