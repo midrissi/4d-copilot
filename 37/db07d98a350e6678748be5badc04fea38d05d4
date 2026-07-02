@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "37db07d98a350e6678748be5badc04fea38d05d4",
+  "prompts": {},
+  "humans": {
+    "h_90186079e5a8a0": {
+      "author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  }
+}
