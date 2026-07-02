@@ -1,0 +1,33 @@
+.github/skills/4d-qodly-guidelines/SKILL.md
+  s_386dd5b610f4bc::t_64b67a3601e0e8 126-127,131,133-143,145,148-155,158-180,184-206,208-209,214-217,220-223,232,235
+  s_4be439cee6aa86::t_254e465cbcbb6e 117-125,128-130,132,144,146-147,156-157,181-183,207,210-213,218-219,224-231,233-234,236-239
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "28525daf18388be846adc716b3f26fa11c850738",
+  "prompts": {},
+  "humans": {
+    "h_90186079e5a8a0": {
+      "author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  },
+  "sessions": {
+    "s_386dd5b610f4bc": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "fb9ede6d-56e2-47c8-9cfb-4bd1af6c5387",
+        "model": "unknown"
+      },
+      "human_author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    },
+    "s_4be439cee6aa86": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "c2e105d9-18ab-461b-b453-2b2c6ea2f405",
+        "model": "unknown"
+      },
+      "human_author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  }
+}
