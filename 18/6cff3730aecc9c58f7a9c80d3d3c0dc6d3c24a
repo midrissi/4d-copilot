@@ -1,0 +1,27 @@
+Project/Sources/Classes/ResponseHelper.4dm
+  h_90186079e5a8a0 1-15
+.github/copilot-instructions.md
+  s_cdbb75f244db5b::t_8eeb8d25cd1fe1 1-5
+  s_cdbb75f244db5b::t_4b8cd72ddae68b 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "186cff3730aecc9c58f7a9c80d3d3c0dc6d3c24a",
+  "prompts": {},
+  "humans": {
+    "h_90186079e5a8a0": {
+      "author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  },
+  "sessions": {
+    "s_cdbb75f244db5b": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "a193bb7a-a207-4ee1-933b-d7784006b8fb",
+        "model": "unknown"
+      },
+      "human_author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  }
+}
