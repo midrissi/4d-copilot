@@ -1,0 +1,23 @@
+.github/skills/4d-debugger/SKILL.md
+  s_db967d8e1d9034::t_7cc4e15bbcbf83 29-34,44,46,61-63,65,67-69,77,80,84,88,92,115
+  s_db967d8e1d9034::t_f826b89386a260 1-28,70-76,78-79,81-83,85-87,89-91,93-114,116-128
+.github/skills/4d-qodly-guidelines/SKILL.md
+  s_db967d8e1d9034::t_7c1c775f9929ec 1-101,110-113
+  s_db967d8e1d9034::t_b98270f89a32c1 102-109
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "e9592d4890361cc66ab2a2166f5ba61196e1c481",
+  "prompts": {},
+  "sessions": {
+    "s_db967d8e1d9034": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "f3b4dee7-1bb8-4d17-a087-2c8118ee2bb3",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  }
+}
