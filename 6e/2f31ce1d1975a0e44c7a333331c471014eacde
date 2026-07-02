@@ -1,0 +1,26 @@
+.github/skills/qodly-page-builder/SKILL.md
+  s_311bb954fbb9aa::t_1299f893110c15 148-163,165
+  s_311bb954fbb9aa::t_db9bbb6b545aa0 439-452
+  s_311bb954fbb9aa::t_fd2db20714644b 218-292
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "6e2f31ce1d1975a0e44c7a333331c471014eacde",
+  "prompts": {},
+  "humans": {
+    "h_90186079e5a8a0": {
+      "author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  },
+  "sessions": {
+    "s_311bb954fbb9aa": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "27e7027d-ec5c-475c-9f94-167a86d7f496",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "Mohamed IDRISSI <med.idrissi@outlook.com>"
+    }
+  }
+}
