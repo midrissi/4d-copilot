@@ -11,7 +11,7 @@ Function handleRequest($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingM
 	var $response : 4D:C1709.OutgoingMessage:=4D:C1709.OutgoingMessage.new()
 	$response.setHeader("Content-Type"; "application/json")
 	
-	This._bootstrap()
+	This:C1470._bootstrap()
 	
 	var $companyId : Text:=""
 	If ($request.urlPath.length>2)
@@ -20,15 +20,15 @@ Function handleRequest($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingM
 	
 	Case of 
 		: ($request.verb="GET") & ($companyId="")
-			This._listCompanies($response)
+			This:C1470._listCompanies($response)
 		: ($request.verb="GET") & ($companyId#"")
-			This._getCompany($companyId; $response)
+			This:C1470._getCompany($companyId; $response)
 		: ($request.verb="POST")
-			This._createCompany($request.getJSON(); $response)
+			This:C1470._createCompany($request.getJSON(); $response)
 		: ($request.verb="PUT") & ($companyId#"")
-			This._updateCompany($companyId; $request.getJSON(); $response)
+			This:C1470._updateCompany($companyId; $request.getJSON(); $response)
 		: ($request.verb="DELETE") & ($companyId#"")
-			This._deleteCompany($companyId; $response)
+			This:C1470._deleteCompany($companyId; $response)
 		Else 
 			$response.statusCode:=405
 			$response.setBody(cs:C1710.ResponseHelper.me.error("Method not allowed"))
